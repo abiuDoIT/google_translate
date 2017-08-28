@@ -1,0 +1,7 @@
+result=$(curl  --data-urlencode "query=$1" --data-urlencode "words=$words" http://127.0.0.1:6532); 
+if [[ $result =~ "{" ]] ;then 
+echo $result 
+else 
+/usr/local/bin/node start.js &
+echo "{\"rerun\":0.1,\"items\":[{\"title\":\"starting the process\"}]}"
+fi
