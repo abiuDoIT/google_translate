@@ -1,0 +1,3 @@
+let a = '{"items":[{"title":"13 reasons why","subtitle":"为什么13个理由","valid":false,"autocomplete":"13 reasons why;"},{"title":"12 years old","subtitle":"12岁","valid":false,"autocomplete":"12 years old;"},{"title":"1 hour","subtitle":"1小时","valid":false,"autocomplete":"1 hour;"},{"title":"1 month","subtitle":"1个月","valid":false,"autocomplete":"1 month;"},{"title":"19th century","subtitle":"19世纪","valid":false,"autocomplete":"19th century;"},{"title":"18 years old","subtitle":"18岁","valid":false,"autocomplete":"18 years old;"},{"title":"15 years old","subtitle":"15岁","valid":false,"autocomplete":"15 years old;"},{"title":"1 year","subtitle":"1年","valid":false,"autocomplete":"1 year;"}]}'
+
+console.log(/^\{/.test(a))

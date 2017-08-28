@@ -1,0 +1,1218 @@
+[
+    [
+        [
+            "秋季",
+            "fall",
+            null,
+            null,
+            2
+        ],
+        [
+            null,
+            null,
+            "Qiūjì",
+            "fôl"
+        ]
+    ],
+    [
+        [
+            "名词",
+            [
+                "秋季",
+                "秋天",
+                "秋",
+                "落",
+                "坠",
+                "交",
+                "坍"
+            ],
+            [
+                [
+                    "秋季",
+                    [
+                        "autumn",
+                        "fall"
+                    ],
+                    null,
+                    0.24506053
+                ],
+                [
+                    "秋天",
+                    [
+                        "fall",
+                        "autumn"
+                    ],
+                    null,
+                    0.10705902
+                ],
+                [
+                    "秋",
+                    [
+                        "autumn",
+                        "fall",
+                        "swing",
+                        "harvest time",
+                        "year",
+                        "period"
+                    ],
+                    null,
+                    0.046045512
+                ],
+                [
+                    "落",
+                    [
+                        "drop",
+                        "fall",
+                        "decline"
+                    ],
+                    null,
+                    0.019194625
+                ],
+                [
+                    "坠",
+                    [
+                        "fall"
+                    ],
+                    null,
+                    0.012011689
+                ],
+                [
+                    "交",
+                    [
+                        "deal",
+                        "friendship",
+                        "mate",
+                        "acquaintance",
+                        "bargain",
+                        "fall"
+                    ],
+                    null,
+                    3.4809334e-05
+                ],
+                [
+                    "坍",
+                    [
+                        "collapse",
+                        "fall",
+                        "tumble"
+                    ],
+                    null,
+                    5.3381841e-06
+                ]
+            ],
+            "fall",
+            1
+        ],
+        [
+            "动词",
+            [
+                "下降",
+                "下跌",
+                "落",
+                "落下",
+                "摔倒",
+                "降",
+                "倒",
+                "掉",
+                "跌",
+                "跌落",
+                "下落",
+                "摔",
+                "下",
+                "跌到",
+                "失守",
+                "堕",
+                "陷",
+                "失陷",
+                "栽跟头",
+                "衰退",
+                "沉落",
+                "沦",
+                "摔交",
+                "颠",
+                "摽",
+                "踣"
+            ],
+            [
+                [
+                    "下降",
+                    [
+                        "decline",
+                        "drop",
+                        "decrease",
+                        "fall",
+                        "go down"
+                    ],
+                    null,
+                    0.10215643
+                ],
+                [
+                    "下跌",
+                    [
+                        "fall",
+                        "tumble"
+                    ],
+                    null,
+                    0.046770621
+                ],
+                [
+                    "落",
+                    [
+                        "drop",
+                        "fall",
+                        "alight",
+                        "go down",
+                        "decline",
+                        "lag"
+                    ],
+                    null,
+                    0.019194625
+                ],
+                [
+                    "落下",
+                    [
+                        "fall",
+                        "drop",
+                        "set",
+                        "alight",
+                        "bring down",
+                        "swoop"
+                    ],
+                    null,
+                    0.014948789
+                ],
+                [
+                    "摔倒",
+                    [
+                        "fall",
+                        "fall down",
+                        "drop",
+                        "go headlong"
+                    ],
+                    null,
+                    0.014717029
+                ],
+                [
+                    "降",
+                    [
+                        "drop",
+                        "lower",
+                        "fall",
+                        "descend",
+                        "come down",
+                        "surrender"
+                    ],
+                    null,
+                    0.012392981
+                ],
+                [
+                    "倒",
+                    [
+                        "pour",
+                        "fall",
+                        "collapse",
+                        "fail",
+                        "topple",
+                        "tip"
+                    ],
+                    null,
+                    0.011461634
+                ],
+                [
+                    "掉",
+                    [
+                        "fall",
+                        "drop",
+                        "lose",
+                        "shed",
+                        "come off",
+                        "turn"
+                    ],
+                    null,
+                    0.011283938
+                ],
+                [
+                    "跌",
+                    [
+                        "fall",
+                        "drop",
+                        "tumble"
+                    ],
+                    null,
+                    0.011108996
+                ],
+                [
+                    "跌落",
+                    [
+                        "fall"
+                    ],
+                    null,
+                    0.0076350942
+                ],
+                [
+                    "下落",
+                    [
+                        "fall",
+                        "sink",
+                        "be out",
+                        "subside"
+                    ],
+                    null,
+                    0.0070613078
+                ],
+                [
+                    "摔",
+                    [
+                        "fall",
+                        "throw",
+                        "drop",
+                        "break",
+                        "toss",
+                        "fall down"
+                    ],
+                    null,
+                    0.0037210477
+                ],
+                [
+                    "下",
+                    [
+                        "go down",
+                        "descend",
+                        "fall",
+                        "put in",
+                        "get off",
+                        "alight"
+                    ],
+                    null,
+                    0.0022569296
+                ],
+                [
+                    "跌到",
+                    [
+                        "fall",
+                        "tumble"
+                    ],
+                    null,
+                    0.0016512049
+                ],
+                [
+                    "失守",
+                    [
+                        "fall"
+                    ],
+                    null,
+                    0.0015755907
+                ],
+                [
+                    "堕",
+                    [
+                        "fall",
+                        "go bad",
+                        "break",
+                        "destroy",
+                        "send down",
+                        "send out"
+                    ],
+                    null,
+                    0.0014571833
+                ],
+                [
+                    "陷",
+                    [
+                        "fall",
+                        "sink",
+                        "get stuck",
+                        "cave in",
+                        "be captured",
+                        "frame up"
+                    ],
+                    null,
+                    0.0014345917
+                ],
+                [
+                    "失陷",
+                    [
+                        "fall",
+                        "fall into enemy hands"
+                    ],
+                    null,
+                    0.00020667253
+                ],
+                [
+                    "栽跟头",
+                    [
+                        "fall",
+                        "suffer a setback",
+                        "tumble"
+                    ],
+                    null,
+                    0.00019720831
+                ],
+                [
+                    "衰退",
+                    [
+                        "decline",
+                        "fall",
+                        "ebb",
+                        "fail",
+                        "drop",
+                        "falter"
+                    ],
+                    null,
+                    0.00014655277
+                ],
+                [
+                    "沉落",
+                    [
+                        "sink",
+                        "fall"
+                    ],
+                    null,
+                    0.00010890877
+                ],
+                [
+                    "沦",
+                    [
+                        "perish",
+                        "fall",
+                        "sink",
+                        "be reduced to"
+                    ],
+                    null,
+                    2.9312398e-05
+                ],
+                [
+                    "摔交",
+                    [
+                        "fall",
+                        "drop",
+                        "fall down",
+                        "go headlong"
+                    ],
+                    null,
+                    2.1445408e-05
+                ],
+                [
+                    "颠",
+                    [
+                        "bump",
+                        "jolt",
+                        "fall",
+                        "go away",
+                        "run",
+                        "topple down"
+                    ],
+                    null,
+                    1.5936874e-05
+                ],
+                [
+                    "摽",
+                    [
+                        "fall",
+                        "signal"
+                    ],
+                    null,
+                    1.0616247e-05
+                ],
+                [
+                    "踣",
+                    [
+                        "prostrate",
+                        "fall",
+                        "tumble"
+                    ],
+                    null,
+                    1.0616247e-05
+                ]
+            ],
+            "fall",
+            2
+        ]
+    ],
+    "en",
+    null,
+    null,
+    [
+        [
+            "fall",
+            null,
+            [
+                [
+                    "秋季",
+                    1000,
+                    true,
+                    false
+                ],
+                [
+                    "秋天",
+                    1000,
+                    true,
+                    false
+                ],
+                [
+                    "下降",
+                    1000,
+                    true,
+                    false
+                ],
+                [
+                    "下跌",
+                    0,
+                    true,
+                    false
+                ]
+            ],
+            [
+                [
+                    0,
+                    4
+                ]
+            ],
+            "fall",
+            0,
+            0
+        ]
+    ],
+    0.80155641,
+    null,
+    [
+        [
+            "en"
+        ],
+        null,
+        [
+            0.80155641
+        ],
+        [
+            "en"
+        ]
+    ],
+    null,
+    null,
+    [
+        [
+            "名词",
+            [
+                [
+                    [
+                        "tumble",
+                        "trip",
+                        "spill",
+                        "topple",
+                        "slip",
+                        "collapse",
+                        "nosedive",
+                        "header",
+                        "cropper"
+                    ],
+                    "m_en_us1246101.025"
+                ],
+                [
+                    [
+                        "decline",
+                        "falloff",
+                        "drop",
+                        "decrease",
+                        "cut",
+                        "dip",
+                        "reduction",
+                        "downswing",
+                        "plummet",
+                        "plunge",
+                        "slump",
+                        "nosedive",
+                        "crash"
+                    ],
+                    "m_en_us1246101.035"
+                ],
+                [
+                    [
+                        "downfall",
+                        "collapse",
+                        "ruin",
+                        "ruination",
+                        "failure",
+                        "decline",
+                        "deterioration",
+                        "degeneration",
+                        "destruction",
+                        "overthrow",
+                        "demise"
+                    ],
+                    "m_en_us1246101.036"
+                ],
+                [
+                    [
+                        "surrender",
+                        "capitulation",
+                        "yielding",
+                        "submission",
+                        "defeat"
+                    ],
+                    "m_en_us1246101.036"
+                ],
+                [
+                    [
+                        "descent",
+                        "declivity",
+                        "slope",
+                        "slant",
+                        "incline",
+                        "downgrade"
+                    ],
+                    "m_en_us1246101.029"
+                ],
+                [
+                    [
+                        "sin",
+                        "wrongdoing",
+                        "transgression",
+                        "error",
+                        "offense",
+                        "lapse",
+                        "fall from grace",
+                        "original sin"
+                    ],
+                    "m_en_us1246101.039"
+                ],
+                [
+                    [
+                        "waterfall",
+                        "cascade",
+                        "cataract",
+                        "rapids",
+                        "white water"
+                    ],
+                    "m_en_us1246101.032"
+                ],
+                [
+                    [
+                        "autumn"
+                    ],
+                    ""
+                ],
+                [
+                    [
+                        "crepuscle",
+                        "dusk",
+                        "evenfall",
+                        "nightfall",
+                        "twilight",
+                        "crepuscule",
+                        "gloam",
+                        "gloaming"
+                    ],
+                    ""
+                ],
+                [
+                    [
+                        "capitulation",
+                        "surrender"
+                    ],
+                    ""
+                ],
+                [
+                    [
+                        "drop"
+                    ],
+                    ""
+                ],
+                [
+                    [
+                        "drop",
+                        "dip",
+                        "free fall"
+                    ],
+                    ""
+                ],
+                [
+                    [
+                        "pin"
+                    ],
+                    ""
+                ],
+                [
+                    [
+                        "tumble",
+                        "spill"
+                    ],
+                    ""
+                ],
+                [
+                    [
+                        "downfall"
+                    ],
+                    ""
+                ],
+                [
+                    [
+                        "decline",
+                        "declivity",
+                        "descent",
+                        "downslope",
+                        "declension",
+                        "declination"
+                    ],
+                    ""
+                ]
+            ],
+            "fall"
+        ],
+        [
+            "动词",
+            [
+                [
+                    [
+                        "drop",
+                        "descend",
+                        "come down",
+                        "go down",
+                        "plummet",
+                        "plunge",
+                        "sink",
+                        "dive",
+                        "tumble",
+                        "cascade"
+                    ],
+                    "m_en_us1246101.001"
+                ],
+                [
+                    [
+                        "topple over",
+                        "tumble over",
+                        "keel over",
+                        "fall down/over",
+                        "go head over heels",
+                        "go headlong",
+                        "collapse",
+                        "take a spill",
+                        "pitch forward",
+                        "trip",
+                        "stumble",
+                        "slip",
+                        "come a cropper"
+                    ],
+                    "m_en_us1246101.009"
+                ],
+                [
+                    [
+                        "subside",
+                        "recede",
+                        "ebb",
+                        "flow back",
+                        "fall away",
+                        "go down",
+                        "sink"
+                    ],
+                    "m_en_us1246101.018"
+                ],
+                [
+                    [
+                        "decrease",
+                        "decline",
+                        "diminish",
+                        "fall off",
+                        "drop off",
+                        "lessen",
+                        "dwindle",
+                        "plummet",
+                        "plunge",
+                        "slump",
+                        "sink",
+                        "depreciate",
+                        "cheapen",
+                        "devalue",
+                        "go through the floor",
+                        "nosedive",
+                        "take a header",
+                        "crash"
+                    ],
+                    "m_en_us1246101.017"
+                ],
+                [
+                    [
+                        "decline",
+                        "deteriorate",
+                        "degenerate",
+                        "go downhill",
+                        "go to rack and ruin",
+                        "decay",
+                        "wither",
+                        "fade",
+                        "fail",
+                        "go to the dogs",
+                        "go to pot",
+                        "go down the toilet"
+                    ],
+                    "m_en_us1246101.052"
+                ],
+                [
+                    [
+                        "die",
+                        "perish",
+                        "lose one's life",
+                        "be killed",
+                        "be slain",
+                        "be lost",
+                        "meet one's death",
+                        "bite the dust",
+                        "croak",
+                        "buy it",
+                        "buy the farm"
+                    ],
+                    "m_en_us1246101.013"
+                ],
+                [
+                    [
+                        "surrender to",
+                        "yield to",
+                        "submit to",
+                        "give in to",
+                        "capitulate to",
+                        "succumb to",
+                        "be taken by",
+                        "be defeated by",
+                        "be conquered by",
+                        "be overwhelmed by"
+                    ],
+                    "m_en_us1246101.012"
+                ],
+                [
+                    [
+                        "occur",
+                        "take place",
+                        "happen",
+                        "come about",
+                        "arise",
+                        "come to pass"
+                    ],
+                    "m_en_us1246101.008"
+                ],
+                [
+                    [
+                        "come",
+                        "arrive",
+                        "appear",
+                        "arise",
+                        "materialize"
+                    ],
+                    "m_en_us1246101.008"
+                ],
+                [
+                    [
+                        "become",
+                        "grow",
+                        "get",
+                        "turn"
+                    ],
+                    "m_en_us1246101.020"
+                ],
+                [
+                    [
+                        "be the responsibility of",
+                        "be the duty of",
+                        "be borne by",
+                        "be one's job",
+                        "come someone's way"
+                    ],
+                    "m_en_us1246101.074"
+                ],
+                [
+                    [
+                        "return",
+                        "devolve",
+                        "pass"
+                    ],
+                    ""
+                ],
+                [
+                    [
+                        "come down",
+                        "precipitate"
+                    ],
+                    ""
+                ],
+                [
+                    [
+                        "fall down"
+                    ],
+                    ""
+                ],
+                [
+                    [
+                        "hang",
+                        "flow"
+                    ],
+                    ""
+                ],
+                [
+                    [
+                        "descend",
+                        "settle"
+                    ],
+                    ""
+                ],
+                [
+                    [
+                        "accrue"
+                    ],
+                    ""
+                ],
+                [
+                    [
+                        "go down",
+                        "come down",
+                        "descend"
+                    ],
+                    ""
+                ],
+                [
+                    [
+                        "come"
+                    ],
+                    ""
+                ],
+                [
+                    [
+                        "light"
+                    ],
+                    ""
+                ],
+                [
+                    [
+                        "lessen",
+                        "decrease",
+                        "diminish"
+                    ],
+                    ""
+                ],
+                [
+                    [
+                        "strike",
+                        "shine"
+                    ],
+                    ""
+                ]
+            ],
+            "fall"
+        ]
+    ],
+    [
+        [
+            "名词",
+            [
+                [
+                    "an act of falling or collapsing; a sudden uncontrollable descent.",
+                    "m_en_us1246101.025",
+                    "his mother had a fall, hurting her leg as she alighted from a train"
+                ],
+                [
+                    "a thing that falls or has fallen.",
+                    "m_en_us1246101.031",
+                    "in October came the first thin fall of snow"
+                ],
+                [
+                    "a decrease in size, number, rate, or level; a decline.",
+                    "m_en_us1246101.035",
+                    "a big fall in unemployment"
+                ],
+                [
+                    "a loss of office.",
+                    "m_en_us1246101.036",
+                    "the fall of the government"
+                ],
+                [
+                    "autumn.",
+                    "m_en_us1246101.040",
+                    "In the fall , autumn leaves will bring a change of color to the coastline."
+                ]
+            ],
+            "fall"
+        ],
+        [
+            "动词",
+            [
+                [
+                    "move downward, typically rapidly and freely without control, from a higher to a lower level.",
+                    "m_en_us1246101.001",
+                    "bombs could be seen falling from the planes"
+                ],
+                [
+                    "(of a person) lose one's balance and collapse.",
+                    "m_en_us1246101.009",
+                    "she fell down at school today"
+                ],
+                [
+                    "decrease in number, amount, intensity, or quality.",
+                    "m_en_us1246101.017",
+                    "in 1987 imports into Britain fell by 12 percent"
+                ],
+                [
+                    "pass into a specified state.",
+                    "m_en_us1246101.020",
+                    "many of the buildings fell into disrepair"
+                ]
+            ],
+            "fall"
+        ]
+    ],
+    [
+        [
+            [
+                "The recording was made in the American Academy of Arts and Letters in New York City in the \u003cb\u003efall\u003c/b\u003e of 2002.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1246101.040"
+            ],
+            [
+                "What we found in making these selections, is that it is all too easy to moan about the decline and \u003cb\u003efall\u003c/b\u003e of popular culture.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1246101.036"
+            ],
+            [
+                "I did not \u003cb\u003efall\u003c/b\u003e or lose my balance or anything else embarrassing, but I was annoyed.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1246101.009"
+            ],
+            [
+                "a big \u003cb\u003efall\u003c/b\u003e in unemployment",
+                null,
+                null,
+                null,
+                3,
+                "m_en_gb0285980.035"
+            ],
+            [
+                "in October came the first \u003cb\u003efall\u003c/b\u003e of snow",
+                null,
+                null,
+                null,
+                3,
+                "m_en_gb0285980.029"
+            ],
+            [
+                "Mrs Tempest was conscious after the initial \u003cb\u003efall\u003c/b\u003e but later collapsed and was airlifted to Nairobi General Hospital.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1246101.025"
+            ],
+            [
+                "Just as I arrived rain began to \u003cb\u003efall\u003c/b\u003e , and inside the cafeKinda Blue was playing.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1246101.001"
+            ],
+            [
+                "a rock \u003cb\u003efall\u003c/b\u003e",
+                null,
+                null,
+                null,
+                3,
+                "m_en_gb0285980.029"
+            ],
+            [
+                "We have a younger generation coming up since the \u003cb\u003efall\u003c/b\u003e of the shah.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1246101.036"
+            ],
+            [
+                "there's a sharp \u003cb\u003efall\u003c/b\u003e to the west here",
+                null,
+                null,
+                null,
+                3,
+                "neid_6709"
+            ],
+            [
+                "The central bank attributed the steady plunge of the gross national savings rate to a rapid \u003cb\u003efall\u003c/b\u003e of savings in the household sector.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1246101.035"
+            ],
+            [
+                "the \u003cb\u003efall\u003c/b\u003e of Jerusalem",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1246101.037"
+            ],
+            [
+                "Mating season commonly takes place during the\u003cb\u003efall\u003c/b\u003e and winter seasons, but can occur at any time throughout the year.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1246101.040"
+            ],
+            [
+                "Are we watching the beginning of the decline and \u003cb\u003efall\u003c/b\u003e of the American empire?",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1246101.036"
+            ],
+            [
+                "However, when water level is high, the falls combine to form one gigantic \u003cb\u003efall\u003c/b\u003e .",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1246101.032"
+            ],
+            [
+                "a big \u003cb\u003efall\u003c/b\u003e in unemployment",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1246101.035"
+            ],
+            [
+                "I've watched the spread of communism and the fall of communism, the spread of fascism and the \u003cb\u003efall\u003c/b\u003e of fascism.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1246101.036"
+            ],
+            [
+                "A subsequent assault was repulsed by the Swedish garrison, but the \u003cb\u003efall\u003c/b\u003e of the city was obviously imminent.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1246101.037"
+            ],
+            [
+                "the \u003cb\u003efall\u003c/b\u003e of the government",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1246101.036"
+            ],
+            [
+                "The film tells what happened after the \u003cb\u003efall\u003c/b\u003e of the city of Konduzto allies of the US.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1246101.037"
+            ],
+            [
+                "His dramatic exit resolved the paradoxes of his life and arguably saved him a very public decline and \u003cb\u003efall\u003c/b\u003e .",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1246101.038"
+            ],
+            [
+                "With the \u003cb\u003efall\u003c/b\u003e of darkness, it shuts down its solar collectors.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1246101.030"
+            ],
+            [
+                "you must not \u003cb\u003efall\u003c/b\u003e into this common error",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1246101.022"
+            ],
+            [
+                "Stunned by the sudden \u003cb\u003efall\u003c/b\u003e , and exhausted by the run, they could only lie on the smooth floor and struggle for breath.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1246101.025"
+            ],
+            [
+                "Omar then left Afghanistan for Pakistan after the \u003cb\u003efall\u003c/b\u003e of the Taliban in 2001.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1246101.036"
+            ],
+            [
+                "I saw my mother \u003cb\u003efall\u003c/b\u003e backwards and hit her head on the table.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1246101.009"
+            ],
+            [
+                "The dollar suffered its biggest \u003cb\u003efall\u003c/b\u003e against the Yen for more than a year.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1246101.035"
+            ],
+            [
+                "Export orders, stable in the previous quarter, had declined with more firms reporting a \u003cb\u003efall\u003c/b\u003e than a growth in orders.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1246101.035"
+            ],
+            [
+                "They are one of the last warblers to leave their breeding grounds in the \u003cb\u003efall\u003c/b\u003e , and one of the first to return in the spring.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1246101.040"
+            ],
+            [
+                "In the \u003cb\u003efall\u003c/b\u003e , they move down in the soil, usually below the frost line, to spend the winter.",
+                null,
+                null,
+                null,
+                3,
+                "m_en_us1246101.040"
+            ]
+        ]
+    ],
+    [
+        [
+            "Fall",
+            "fall in love",
+            "fall asleep",
+            "fall out",
+            "fall down",
+            "fall off",
+            "to fall",
+            "fall back",
+            "fall over",
+            "fall apart",
+            "fall into"
+        ]
+    ]
+]
