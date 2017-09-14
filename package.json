@@ -1,0 +1,30 @@
+{
+  "name": "google_translate",
+  "version": "1.0.0",
+  "description": "a workflow for google_translate",
+  "main": "index.js",
+  "dependencies": {
+    "got": "^7.1.0",
+    "koa": "^2.3.0",
+    "koa-body": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abiuDoIT/google_translate.git"
+  },
+  "keywords": [
+    "google",
+    "translate",
+    "alfred"
+  ],
+  "author": "abiu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abiuDoIT/google_translate/issues"
+  },
+  "homepage": "https://github.com/abiuDoIT/google_translate#readme"
+}
