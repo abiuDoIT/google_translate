@@ -1,11 +1,17 @@
 const translate = require('./google_translate')
 const Koa = require('koa');
+const path = require('path');
 const concern_char = ";";
-const concern_char_p = new RegExp(concern_char);
-
+const concern_char_p = new RegExp(/[;；]/);
+const say_p = new RegExp(/[;；]s/);
+const say_num_p = new RegExp(/[;；]s(\d)/);
+const param_p = new RegExp(/-(\w+)\s+?/);
 let global_words ;
-let global_latest_id = 0;
 let global_latest_query ="";
+let global_latest_single={
+    key:"",
+    value:""
+}
 async function complete(query,opts){
     let complete_words = await translate.complete(query, opts);
     if(!complete_words||!complete_words.length)
@@ -39,9 +45,11 @@ async function batch_translate(complete_words, opts) {
 
 }
 async function single_translate(query, opts) {
-    let result = await translate(query.trim(), opts)
+    if(query == global_latest_single.key)
+        return global_latest_single.value;
+    let result = await translate(query, opts)
     let items = [];
-    items.push({title:result[0][0][0]+" "+result[0][1][2],subtitle:result[0][0][1]+" "+result[0][1][3],sort_key:1,text:{copy:result[0][0][0]}});
+    items.push({title:result[0][0][0]+" "+result[0][1][2],subtitle:result[0][0][1]+" "+result[0][1][3],sort_key:1,autocomplete:result[0][0][0],text:{copy:result[0][0][0]}});
     let meaning = result[1];
     if(meaning){
         meaning.forEach(function(type) {
@@ -51,12 +59,14 @@ async function single_translate(query, opts) {
                     title:word[0],
                     subtitle:type_name+": "+word[1].join(","),
                     sort_key:word[3],
-                    text:{copy:word[0]}
+                    text:{copy:word[0]},
+                    autocomplete:word[0]+concern_char,
                 })
             })
         }, this);
         items = items.sort((a,b)=>{return b.sort_key-a.sort_key}).slice(0,10);
     }
+    global_latest_single={key:query,value:{items:items}};
     return ({items:items})
 }
 
@@ -67,10 +77,10 @@ function handle_error(e){
         subtitle:e.stack||''
     }]})
 }
-function typing(query,isTyping){
+function typing(query,isTyping,no_rerun){
     if(isTyping)
         global_latest_query = query;  
-    return ({rerun:0.1,
+    return ({rerun:no_rerun?undefined:0.1,
         items:[{
         title:query,
         subtitle:query,
@@ -78,16 +88,47 @@ function typing(query,isTyping){
         autocomplete: query + concern_char
     }]})
 }
-async function main(query,variables){
-    let typedid = variables.typedid;
-    let words = variables.words?global_words:"";
-    let opts = { from: "en", to: "zh-CN" };
-    
-    if(/.*[\u4e00-\u9fa5]+.*$/.test(query)){
-        opts = { from: "zh-CN", to: "en" };
+async function say(query,real_qeury,opts){
+    opts = JSON.parse(JSON.stringify(opts));
+    let say_num = query.match(say_num_p);
+    say_num = say_num&&say_num[1];
+    let value = global_latest_single.value;
+    if(value){
+        value = JSON.parse(JSON.stringify(value))
+        value["items"][(say_num||1)-1]["icon"]= {
+            "type": "png",
+            "path": path.resolve(__dirname,"volume.png")
+        };
+        if(say_num){
+            real_qeury=value["items"][say_num-1]["autocomplete"];
+        }else{
+            opts.to = opts.from;
+        }
     }
-    if (concern_char_p.test(query)) 
-           return single_translate(query.replace('/t',''),opts).catch(handle_error)
+    return  speak(real_qeury,opts,value);
+}
+
+async function speak(text,opts,value){
+    opts = opts||{};
+    opts.to = opts.to||find_language(text)
+    await translate.speak(text,opts);
+    return value|| typing("speak: "+text,null,true);
+}
+async function main(total_query,variables){
+    let {opts,query} = get_param(total_query);
+    let real_qeury = get_real_qeury(query);
+    if(!real_qeury){
+        return typing("inputing...",true,true)
+    }
+    let words = variables.words?global_words:"";
+    opts.from = opts.from ||find_language(query);
+    opts.to = opts.to|| (opts.from=="zh-CN"?"en":"zh-CN");
+    if(say_p.test(query)){
+        return  say(query,real_qeury,opts)
+    }
+    if (concern_char_p.test(query)) {
+        return single_translate(real_qeury,opts).catch(handle_error)
+    }
     if(query!=global_latest_query)
         return typing(query,true);
     
@@ -102,6 +143,28 @@ function timeout(n){
         setTimeout(res,n)
     })
 }
+function get_real_qeury(query){
+    let index = query.search(concern_char_p);
+    if(index==-1)
+        return query;
+    return query.substr(0,index);
+}
+function get_param(query){
+    let match = query.match(param_p);
+    let opts = {};
+    if(match){
+        opts = {to:match[1]}
+    }
+    return {query:query.replace(param_p,""),opts:opts}
+}
+function find_language(text){
+   if(/.*[\u4e00-\u9fa5]+.*$/.test(text)){
+       return "zh-CN";
+   } else if(/[\u3000-\u303f\u3040-\u309f\u30a0-\u30ff\uff00-\uff9f\u4e00-\u9faf\u3400-\u4dbf]/.test(text)){
+       return "ja"
+   }else return "en";
+}
+
 
 const koa = new Koa();
 koa.use(require('koa-body')())
@@ -110,12 +173,9 @@ koa.use(async function(ctx,next){
     ctx.body = await main(query.query,query);
     ctx.body = ctx.body||typing(query.query);
     // console.log(ctx.request.body,ctx.body)
-    
 })
 koa.listen(6532);
-process.on('SIGINT',function(){
-    // console.log('child sigint');
-});
+
 
 
 
