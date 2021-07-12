@@ -10,3 +10,5 @@ the domain used to request is https://translate.google.cn ,because of some wall.
 so if you are not chinese,you should  change the domain and default target language.
 
 
+nvm install 11.10.0
+npm install

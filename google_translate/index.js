@@ -2,12 +2,24 @@ const querystring = require('querystring');
 const got = require('got');
 const token = require('./get_token');
 const Player = require('player');
-const Speaker = require('speaker')
 const languages = require('./languages');
+const {https} = require('follow-redirects')
+const urlM = require('url')
 const single_url = 'https://translate.google.cn/translate_a/single';
 const batch_url = 'https://translate.google.cn/translate_a/t';
 const speak_url = "https://translate.google.cn/translate_tts";
 const complete_url = "https://clients1.google.cn/complete/search";
+
+const origGet = https.get.bind(https);
+
+https.get = function(link,callback){
+    const option = urlM.parse(link);
+    option.headers =  {
+        'Accept':'*/*',
+        'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36',
+    };
+    return origGet(option,callback)
+}
 
 async function translate(text, opts) {
     opts = opts || {};
@@ -71,10 +83,7 @@ function complete(text, opts) {
     })
 }
 
-Speaker.prototype.close = function (flush) {
-    this._closed = true;
-    this.emit('close');
-  };
+
 async function speak(text, opts) {
     if (!text) {
         return;
@@ -99,7 +108,7 @@ async function speak(text, opts) {
     player.on("error", function (e) {
         // console.error(e)
     })
-     
+    console.log(speak_url + "?" + querystring.stringify(data));
     player.add(speak_url + "?" + querystring.stringify(data));
     player.play(function (err, end) { conosle.log(err, end) })
     return player;
@@ -111,13 +120,13 @@ module.exports.speak = speak;
 let s ;
 async function run(){
     s=await  speak("卧槽长江后浪推前浪，前浪死在沙滩上",{to:"zh-CN"});
-    await timeout(1000)
-    s = await speak("啊啊啊啊啊",{to:"zh-CN"})
-    s = await speak("卧槽",{to:"zh-CN"})
-    await timeout(1000)
-    s = await speak("我的天尼玛哟",{to:"zh-CN"})
+    // await timeout(1000)
+    // s = await speak("啊啊啊啊啊",{to:"zh-CN"})
+    // s = await speak("卧槽",{to:"zh-CN"})
+    // await timeout(1000)
+    // s = await speak("我的天尼玛哟",{to:"zh-CN"})
 }
-// run().catch(console.error)
+run().catch(console.error)
 function timeout(n){
     return new Promise((res,rej)=>{
         setTimeout(res,n)
