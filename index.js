@@ -173,7 +173,7 @@ koa.use(async function(ctx,next){
     let query = ctx.request.body;
     ctx.body = await main(query.query,query);
     ctx.body = ctx.body||typing(query.query);
-    // console.log(ctx.request.body,ctx.body)
+    console.log(ctx.request.body,ctx.body)
 })
 koa.listen(6532);
 

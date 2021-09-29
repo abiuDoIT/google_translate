@@ -5,9 +5,10 @@
   "main": "index.js",
   "dependencies": {
     "got": "^7.1.0",
+    "https-proxy-agent": "^5.0.0",
     "koa": "^2.3.0",
     "koa-body": "^2.3.0",
-    "player": "^0.6.1",
+    "player": "^0.6.1"
   },
   "devDependencies": {},
   "scripts": {

@@ -4,12 +4,12 @@ const token = require('./get_token');
 const Player = require('player');
 const languages = require('./languages');
 const {https} = require('follow-redirects')
+var HttpsProxyAgent = require('https-proxy-agent');
 const urlM = require('url')
 const single_url = 'https://translate.google.cn/translate_a/single';
 const batch_url = 'https://translate.google.cn/translate_a/t';
-const speak_url = "https://translate.google.cn/translate_tts";
+const speak_url = "https://translate.google.com/translate_tts";
 const complete_url = "https://clients1.google.cn/complete/search";
-
 const origGet = https.get.bind(https);
 
 https.get = function(link,callback){
@@ -18,8 +18,63 @@ https.get = function(link,callback){
         'Accept':'*/*',
         'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36',
     };
+    if(link.indexOf('google.com')){
+        option.agent = new HttpsProxyAgent('http://127.0.0.1:8001')
+    }
     return origGet(option,callback)
 }
+// Player.download = function(src, callback) {
+//     var self = this
+//     var called = false
+//     var option = {};
+
+
+//     request
+//       .get(query,option, responseHandler)
+//       .once('error', errorHandler)
+
+//     function responseHandler(res) {
+//       called = true
+
+//       var isOk = (res.statusCode === 200)
+//       var isAudio = (res.headers['content-type'].indexOf('audio/mpeg') > -1)
+//       var isSave = self.options.cache
+//       var isStream = self.options.stream
+
+//       if (!isOk)
+//         return callback(new Error('Resource invalid'))
+//       if (isStream)
+//         return callback(null, res)
+//       if (!isAudio)
+//         return callback(new Error('Resource type is unsupported'))
+
+//       // Create a pool
+//       var pool = new PoolStream()
+//       // Pipe into memory
+//       res.pipe(pool)
+
+//       // Check if we're going to save this stream
+//       if (!isSave)
+//         return callback(null, pool)
+
+//       // Save this stream as file in download directory
+//       var file = path.join(
+//         self.options.downloads,
+//         fetchName(src)
+//       )
+
+//       self.emit('downloading', src)
+//       pool.pipe(fs.createWriteStream(file))
+
+//       // Callback the pool
+//       callback(null, pool)
+//     }
+
+//     function errorHandler(err) {
+//       if (!called)
+//         callback(err)
+//     }
+//   }
 
 async function translate(text, opts) {
     opts = opts || {};
@@ -106,7 +161,7 @@ async function speak(text, opts) {
     data[ttk.name] = ttk.value;
     let player = new Player();
     player.on("error", function (e) {
-        // console.error(e)
+        console.error(e)
     })
     console.log(speak_url + "?" + querystring.stringify(data));
     player.add(speak_url + "?" + querystring.stringify(data));
@@ -120,11 +175,11 @@ module.exports.speak = speak;
 let s ;
 async function run(){
     s=await  speak("卧槽长江后浪推前浪，前浪死在沙滩上",{to:"zh-CN"});
-    // await timeout(1000)
-    // s = await speak("啊啊啊啊啊",{to:"zh-CN"})
-    // s = await speak("卧槽",{to:"zh-CN"})
-    // await timeout(1000)
-    // s = await speak("我的天尼玛哟",{to:"zh-CN"})
+    await timeout(1000)
+    s = await speak("啊啊啊啊啊",{to:"zh-CN"})
+    s = await speak("卧槽",{to:"zh-CN"})
+    await timeout(1000)
+    s = await speak("我的天尼玛哟",{to:"zh-CN"})
 }
 run().catch(console.error)
 function timeout(n){

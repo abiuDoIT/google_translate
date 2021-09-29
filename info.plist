@@ -26,6 +26,10 @@
 			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>1</integer>
 				<key>argumenttype</key>
@@ -45,11 +49,11 @@
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string>result=$(curl  --data-urlencode "query=$1" --data-urlencode "words=$words" http://127.0.0.1:6532); 
+				<string>result=$(curl --proxy '' --data-urlencode "query=$1" --data-urlencode "words=$words" http://127.0.0.1:6532); 
 if [[ $result =~ "{" ]] ;then 
 echo $result 
 else 
-/usr/local/bin/node start.js &amp;
+/Users/abiu/.nvm/versions/node/v11.10.0/bin/node start.js &amp;
 echo "{\"rerun\":0.1,\"items\":[{\"title\":\"starting the process\"}]}"
 
 fi
@@ -73,7 +77,7 @@ fi
 			<key>uid</key>
 			<string>63F60794-BB56-4415-9372-BAF974C3A7E1</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 	</array>
 	<key>readme</key>
