@@ -4,7 +4,7 @@
   "description": "a workflow for google_translate",
   "main": "index.js",
   "dependencies": {
-    "got": "^7.1.0",
+    "got": "^11.8.5",
     "https-proxy-agent": "^5.0.0",
     "koa": "^2.3.0",
     "koa-body": "^2.3.0",
